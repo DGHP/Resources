@@ -1,18 +1,15 @@
 # Python and Flask
 
-- [Introductions](#introductions)
-  * [Introduction to Python](#introduction-to-python)
-    + [pip](#pip)
-      - [A key difference between pip and npm](#a-key-difference-between-pip-and-npm)
-  * [Introduction to Flask](#introduction-to-flask)
-- [Things to know about Python syntax](#things-to-know-about-python-syntax)
-- [Accessing a MongoDB database in Python](#accessing-a-mongodb-database-in-python)
-- [Password authentication/login in Python](#password-authentication-login-in-python)
-- [Server and unit testing frameworks](#server-and-unit-testing-frameworks)
-- [Game logic written in Python](#game-logic-written-in-python)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
+ - [Introductions](#introductions)
+   - [Introduction to Python](#introduction-to-python)
+   - [Introduction to Flask](#introduction-to-flask)
+   - [pip](#pip)
+     - [A key difference between pip and npm](#a-key-difference-between-pip-and-npm)
+ - [Things to know about Python syntax](#things-to-know-about-python-syntax)
+ - [Accessing a MongoDB database in Python](#accessing-a-mongodb-database-in-python)
+ - [Password authentication/login in Python](#password-authenticationlogin-in-python)
+ - [Server and unit testing frameworks](#server-and-unit-testing-frameworks)
+ - [Game logic written in Python](#game-logic-written-in-python)
 
 ## Introductions
 
@@ -26,8 +23,27 @@ although the command you use might change depending on how you've installed Pyth
 
 Python 3 and Python 2 are incompatible. We should all try to use the exact same version of Python, using pyenv, a Python version manager like nvm (more forthcoming). When we deploy, we can tell Heroku/whatever to use that specific Python version.
 
-#### pip
-pip is Python's standard package manager, like npm is for JavaScript. pip comes installed with Python 3.4 +.
+
+### Introduction to Flask
+flask is a framework, like Express. On the surface, at least, it's pretty similar:
+
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+```
+
+This program will, I think, respond to a get request to the home URL with the text 'Hello, World!', by calling the function hello_world()
+
+### pip
+pip is Python's standard package manager, like npm is for JavaScript. pip comes installed with Python 3.4 +, and has the same install syntax as npm, e.g.
+
+```
+pip install bcrypt
+```
 
 The Python equivalent of a package.json is a requirements.txt
 
@@ -37,7 +53,7 @@ You can make and maintain one using pip freeze:
 pip freeze > requirements.txt
 ```
 
-and then use
+and then when installing a project on another machine, use
 
 ```
 pip install -r requirements.txt
@@ -55,25 +71,12 @@ Then in development, you run pip install -r requirements_dev.txt and it also ins
 
 There's a lot more you can do, of course. [Here's a link](https://realpython.com/what-is-pip/).
 
-##### A key difference between pip and npm
+#### A key difference between pip and npm
 
 npm installs packages in the project directory, unless you provide the -g flag to install globally. pip, meanwhile, installs packages globally. This is problematic when you are working on more than one project, because if both projects require the same package, but require different versions of the package, you're screwed. As a result, most people use a package called virtualenv which makes a local copy of your packages and your installation of Python(!) and runs python scripts from there instead of globally. 
 
 virtualenv can be combined with pyenv, and there's even a program called pyenv-virtualenv which is designed to do exactly that. However if you want to use Python 3.3+ pyenv-virtualenv uses venv instead of virtualenv, which is a different program for doing the same job. Its all a bit of a mess, but here's [some instructions](https://gist.github.com/wronk/a902185f5f8ed018263d828e1027009b) at least.
 
-### Introduction to Flask
-flask is a framework, like Express. On the surface, at least, it's pretty similar:
-
-```python
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-```
-
-This program will, I think, respond to a get request to the home URL with the text 'Hello, World!', by calling the function hello_world()
 
 ## Things to know about Python syntax 
 
