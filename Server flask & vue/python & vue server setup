@@ -1,6 +1,6 @@
 ### Intro
 
-Below is a simplified version of the first section of [!](https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/).
+Below is a simplified version of the first section of <https://testdriven.io/blog/developing-a-single-page-app-with-flask-and-vuejs/>.
 
 Things to note:
 - make sure both your python flask server and vue application are running 
