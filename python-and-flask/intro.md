@@ -21,7 +21,7 @@ Python, as a language, needs to be installed on a computer (like Node). It doesn
 
 although the command you use might change depending on how you've installed Python. 
 
-Python 3 and Python 2 are incompatible. We should all try to use the exact same version of Python, using pyenv, a Python version manager like nvm (more forthcoming). When we deploy, we can tell Heroku/whatever to use that specific Python version.
+Python 3 and Python 2 are incompatible. We should all try to use the same version of Python, using pyenv, a Python version manager like nvm (more forthcoming). When we deploy, we can tell Heroku/whatever to use that specific Python version.
 
 
 ### Introduction to Flask
