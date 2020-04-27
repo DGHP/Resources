@@ -10,6 +10,7 @@
 | -- | --- |
 | I rebuilt the same web API using Express, Flask, and ASP.NET | https://www.freecodecamp.org/news/i-built-a-web-api-with-express-flask-aspnet/ |
 | A decent-length guide to flask | https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world |
+|creating APIs with python and flask|https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask|
 
 ## serverless front-end
 | Description | Link |
