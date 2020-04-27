@@ -4,7 +4,8 @@ All my information comes from [this](https://realpython.com/absolute-vs-relative
 
 ## The difference between modules and packages
 
-A Python module is a file with a .py extension, and a package is a folder with a collection of .py files inside it. Packages often contain ```__init__.py``` files (like our app package does) - in Python 2 days, they had to. 
+- A Python __module__ is a file with a .py extension
+- A Python __package__ is a folder with a collection of .py files inside it. Packages often contain ```__init__.py``` files. In Python 2 days, they had to. 
 
 ## What's valid on the left hand of from y import x ?
 
