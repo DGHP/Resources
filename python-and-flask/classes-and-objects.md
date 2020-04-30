@@ -4,4 +4,5 @@
 
 You iniialize a class by calling it like a function. If you provide arguments to the class name when you initialize it, these are passed to the class's ```__init__()``` method. 
 
+Classes can also _inherit_ from one another. If class A inherits from class B, an instance of class A will have the methods and properties of an instance of class B, as well as the methods and properties defined specifically for class A. To indicate inheritance, put then name of the parent class in the child class's parameter list when defining the class. 
 
